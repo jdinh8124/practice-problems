@@ -8,12 +8,21 @@ function sumArray(arrayAdd){
 }
 
 function fitWithinVal(arrayParam, numberParam){
+  var numsArr = [];
+  var num = null;
+  for(var i = 0; i < arrayParam.length; i++){
+    if(num + arrayParam[i] < numberParam){
+      numsArr.push(arrayParam[i]);
+      num += arrayParam[i];
+  }
 
-
+}
+  return numsArr;
 
   // - fitWithinVal: given an array and a number, sum the array until you reach the number.keep adding any values that would total below the given value return an array of every number you could add For example:
   // - input: [1, 100, 2, 4, 5, 6], 7)
   // - return [1, 2, 4]
+
 
 }
 function getAllNamesShorterThan(nameArray, nameNumber){
@@ -35,8 +44,8 @@ function getAllNamesShorterThan(nameArray, nameNumber){
 }
 
 function makeLabel(inputObject){
-  return inputObject.greeting + " " + inputObject.givenName + " " +  inputObject.familyName + " \\ " + inputObject.streetNumber + " " + inputObject.streetName + "\\" + "n" + inputObject.city + ", "
-    + inputObject.state + " " + inputObject.zip;
+  return inputObject.greeting + " " + inputObject.givenName + " " + inputObject.familyName + "\n" + inputObject["home address"].streetNumber + " " + inputObject["home address"].streetName + "\n"  + inputObject["home address"].city + ", "
+    + inputObject["home address"].state + " " + inputObject["home address"].zip;
 }
 
 
