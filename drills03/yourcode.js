@@ -27,8 +27,8 @@ function getPathParts(url){
   var objectReturn = {};
   objectReturn.protocol = url.substring(0, url.indexOf(":"));
   objectReturn.host = url.slice(url.indexOf("/") +2, url.lastIndexOf(":"));
-  objectReturn.port = url.slice(url.lastIndexOf(":") +1, url.lastIndexOf(":"));
-  objectReturn.path = url.slice(url.indexOf(":") +2, url.lastIndexOf("/"));
+  objectReturn.port = parseInt(url.slice(url.lastIndexOf(":") + 1, url.indexOf("/", url.lastIndexOf(":") + 1)));
+  objectReturn.path = url.slice(url.indexOf("/", url.indexOf("/", url.lastIndexOf(":"))) +1, url.lastIndexOf("/"));
   objectReturn.file = url.slice(url.lastIndexOf("/") + 1, url.length);
   return objectReturn;
 }
