@@ -6,6 +6,7 @@
 
 
 function changeElements(element){
+  debugger;
     var numtext = $(element).text();
     switch (numtext){
       case "one":
@@ -38,7 +39,7 @@ function changeElements(element){
         default:
         return;
     }
-    return $(element).text(numtext);
+   $(element).text(numtext);
 }
 
 function appendTextToElement(){
