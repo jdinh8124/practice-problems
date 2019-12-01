@@ -11,18 +11,13 @@
 //   - If you are unfamiliar with the Fibonacci sequence < a href = "https://www.google.com" target = "_blank" > Click Here
 
 function fibSequence(number){
-  var array = [];
-  var first = 0;
-// do
-  for(var i = 0; i < number; i++){
-
-    var second = parseInt(i);
-    var currentNum = first + second;
-    first = parseInt(i)
+  var array = [0,1];
+  for(var i = 0; i < number-2; i++){
+    var currentNum = array[array.length-1] +  array[array.length-2]
     array.push(currentNum)
   }
 
   return array;
 }
 
-console.log(fibSequence(12));
+console.log(fibSequence(19));
