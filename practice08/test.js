@@ -13,7 +13,11 @@
 
 
 function character_convert(string){
-
+  var stringToPush = "";
+  for(var i = 0; i < string.length; i++){
+    stringToPush += string.charCodeAt(i);
+  }
+  return stringToPush;
 }
 
 
